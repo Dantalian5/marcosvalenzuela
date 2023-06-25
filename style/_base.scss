@@ -1,0 +1,26 @@
+// Fonts loading...
+@font-face {
+	font-family: "Exo";
+	font-style: normal;
+	font-weight: 600;
+	src: url(../assets/fonts/Exo-Bold.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: "Exo";
+	font-style: normal;
+	font-weight: 400;
+	src: url(../assets/fonts/Exo-Regular.ttf);
+	font-display: swap;
+}
+// Fonts declare variable...
+$f_family-exo: "Exo", sans-serif;
+
+body {
+	min-height: 100vh;
+	min-height: 100svh;
+}
+img,
+svg {
+	max-width: 100%;
+}

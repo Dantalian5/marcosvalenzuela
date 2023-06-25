@@ -1,0 +1,71 @@
+.top-navbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5rem;
+	justify-content: center;
+	//
+	background: #15162a;
+	padding-inline: 1.5rem;
+	//
+	&__logo {
+		//margin-right: auto;
+		&::after {
+			content: "\223C\0024";
+			font-family: $f_family-exo;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 32px;
+
+			color: #eaeaea;
+		}
+	}
+	&__links {
+		margin-inline: auto;
+		&__item {
+			margin-right: 24px;
+			display: block;
+			&::before {
+				content: "\223C";
+				font-family: $f_family-exo;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 32px;
+
+				color: #eaeaea;
+			}
+			&::after {
+                content: "/";
+				font-family: $f_family-exo;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 32px;
+
+				color: #eaeaea;
+			}
+		}
+	}
+	&__opt {
+	}
+}
+.logo {
+	font-family: $f_family-exo;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 43px;
+	color: #eaeaea;
+}
+.top-navbar__links__item a {
+	font-family: $f_family-exo;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 32px;
+	/* identical to box height */
+
+	color: #eaeaea;
+}

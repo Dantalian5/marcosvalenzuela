@@ -1,0 +1,28 @@
+.top-navbar {
+	&__links {
+		&__item {
+			&:hover {
+				&::after {
+					//color: #15162a;
+					//background: #eaeaea;
+					animation: 1s steps(1) infinite blink;
+				}
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0%{
+        color: #15162a;
+		background: #eaeaea;
+	}
+    50% {
+		color: #eaeaea;
+		background: none;
+	}
+	100% {
+		color: #15162a;
+		background: #eaeaea;
+	}
+}
