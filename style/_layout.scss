@@ -1,15 +1,40 @@
-.prueba {
-	background: #15162a;
-    width: 100%;
-    height: 100vh;
+:root {
+	--section-inline-value: 4%;
+	--section-inline-padding: clamp(1rem, var(--section-inline-value), 6.25rem);
 }
 
-
-//----------
-.row{
-    display: flex;
-    align-items: center;
+.row {
+	display: flex;
+	align-items: center;
+	&-wrap {
+		flex-wrap: wrap;
+	}
 }
-.container{
-    
+.column {
+	flex: 1 1 auto;
+}
+
+.section {
+	max-width: 90rem;
+	padding-inline: var(--section-inline-padding);
+	margin-inline: auto;
+	//overflow: hidden;
+}
+//-----------------
+.l-navbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.l-header {
+	min-height: 100vh;
+	min-height: 100svh;
+	gap: 1rem;
+	&__info {
+		&__text {
+		}
+	}
+	&__img {
+	}
 }
