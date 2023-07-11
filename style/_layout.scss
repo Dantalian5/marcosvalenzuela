@@ -47,7 +47,18 @@
 .skills {
 	padding-block: $space-8em;
 }
-.section__info{
+.projects {
+	padding-block: $space-8em;
+}
+.section__info {
 	gap: $space-2em;
 	align-items: stretch;
+}
+.section__projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+	align-self: stretch;
 }

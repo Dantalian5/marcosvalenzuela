@@ -347,7 +347,6 @@ body {
 img,
 svg {
   max-width: 100%;
-  max-height: 100%;
   color: inherit;
   font-size: inherit;
 }
@@ -411,9 +410,22 @@ img {
   padding-block: 8rem;
 }
 
+.projects {
+  padding-block: 8rem;
+}
+
 .section__info {
   gap: 2rem;
   align-items: stretch;
+}
+
+.section__projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  align-self: stretch;
 }
 
 .font-h1,
@@ -522,6 +534,8 @@ img {
 .section-title {
   padding-left: 2.25rem;
   padding-bottom: 2.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .styled-box {
@@ -550,6 +564,65 @@ img {
 .skill-box__icon {
   line-height: 0;
   font-size: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #52C4C4;
+  width: 18.75rem;
+}
+.project-card__title {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 16rem;
+  transform: translate(0, -0.85em);
+  padding-inline: 0.5rem;
+  background: #15162A;
+}
+.project-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 13.75rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid #52C4C4;
+}
+.project-card__image {
+  width: 100%;
+}
+.project-card__github-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 4px solid #52C4C4;
+  background: #fff;
+  box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  color: #15162A;
+}
+.project-card__info > * {
+  margin-top: 1.5rem;
+}
+.project-card__btn-live-site {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.project-card__live-icon {
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  transform: translate(100%, -50%);
 }
 
 .top-navbar__links__item:hover::after {

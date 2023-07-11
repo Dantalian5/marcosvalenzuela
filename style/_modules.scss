@@ -35,7 +35,7 @@
 	align-items: center;
 	min-width: fit-content;
 	max-width: fit-content;
-	padding: $space-em_5 $space-1_5em;
+	padding: 0.5rem 1.5rem;
 	gap: 0.125rem;
 	border: 2px solid $c-ghost-white;
 	border-radius: 3.125rem;
@@ -47,32 +47,32 @@
 	align-items: stretch;
 	justify-content: space-between;
 	background: $c-dark-blue;
-	padding-block: $space-em;
+	padding-block: 1rem;
 	z-index: 10;
 	&__logo {
 		&__arrow {
 			color: $c-green-cyan;
 		}
 		&__text {
-			margin-left: $space-em_5;
+			margin-left: 0.5rem;
 		}
 	}
 }
 //-------------------------------------------------------------------
 .hero__info {
-	padding-left: calc($space-2em + $space-em_25);
+	padding-left: calc(2rem + 0.25rem);
 	& > :not(:last-child) {
-		margin-bottom: $space-em;
+		margin-bottom: 1rem;
 	}
 	&__text {
 		& > :not(:last-child) {
-			margin-bottom: $space-em;
+			margin-bottom: 1rem;
 		}
 	}
 	&__cta {
-		padding-block: $space-1_5em;
-		padding-right: $space-2em;
-		gap: $space-2em;
+		padding-block: 1.5rem;
+		padding-right: 2rem;
+		gap: 2rem;
 	}
 }
 .guides {
@@ -83,8 +83,8 @@
 		position: absolute;
 		left: 0;
 		top: 50%;
-		transform: translate(calc(-100% - $space-em_25), -100%);
-		width: calc($space-1_5em - $space-em_25);
+		transform: translate(calc(-100% - 0.25rem), -100%);
+		width: calc(1.5rem - 0.25rem);
 		height: 100vh;
 		border-bottom: 1px dotted $c-green-cyan;
 		border-left: 1px dotted $c-green-cyan;
@@ -94,37 +94,100 @@
 }
 
 .info-block {
-	padding-inline: calc($space-2em + $space-em_25) $space-2em;
+	padding-inline: calc(2rem + 0.25rem) 2rem;
 	& > :not(:last-child) {
-		margin-bottom: $space-2em;
+		margin-bottom: 2rem;
 	}
 }
 .section-title {
-	padding-left: calc($space-2em + $space-em_25);
-	padding-bottom: calc($space-2em + $space-em_25);
+	padding-left: calc(2rem + 0.25rem);
+	padding-bottom: calc(2rem + 0.25rem);
+	width: fit-content;
 }
-.styled-box{
+.styled-box {
 	position: relative;
-	padding: $space-1_5em;
-	border-radius: .5rem;
-    border: 1px solid $c-green-cyan;
-	&__title{
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	border: 1px solid $c-green-cyan;
+	&__title {
 		position: absolute;
 		top: 0;
-		left: $space-1_5em;
+		left: 1.5rem;
 		transform: translate(0, -50%);
 		max-width: fit-content;
-		padding-inline: $space-em_5;
+		padding-inline: 0.5rem;
 		background: $c-dark-blue;
 	}
-	&__skill-items{
-		gap: $space-2em;
+	&__skill-items {
+		gap: 2rem;
 	}
 }
 .skill-box {
-	gap: $space-em_5;
-	&__icon{
+	gap: 0.5rem;
+	&__icon {
 		line-height: 0;
 		font-size: 1.5rem;
+	}
+}
+.project-card {
+	position: relative;
+	padding: 3rem 1rem 1rem 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid $c-green-cyan;
+
+	width: 18.75rem;
+	// & > :not(:first-child) {
+	// 	margin-top: $space-1_5em;
+	// }
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 1.5rem;
+		width: fit-content;
+		max-width: 16rem;
+		transform: translate(0, -0.85em);
+		padding-inline: 0.5rem;
+		background: $c-dark-blue;
+	}
+	&__image-wrapper {
+		position: relative;
+		width: 100%;
+		height: 13.75rem;
+		overflow: hidden;
+		border-radius: 0.5rem;
+		border: 1px solid $c-green-cyan;
+	}
+	&__image {
+		width: 100%;
+	}
+	&__github-btn {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+		padding: $space-em;
+		border-radius: 50%;
+		border: 4px solid $c-green-cyan;
+		background: $c-n-white;
+		box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.5);
+		font-size: 1.5rem;
+		color: $c-dark-blue;
+	}
+	&__info {
+		& > * {
+			margin-top: 1.5rem;
+		}
+	}
+	&__btn-live-site {
+		display: block;
+		width: fit-content;
+		position: relative;
+	}
+	&__live-icon {
+		position: absolute;
+		top: 50%;
+		right: -0.5rem;
+		transform: translate(100%, -50%);
 	}
 }
