@@ -39,19 +39,26 @@
 }
 .header {
 	gap: 1rem;
-	padding-block: $space-2em;
+	padding-block: 2rem;
 }
 .about {
-	padding-block: $space-8em;
+	padding-block: 8rem;
 }
 .skills {
-	padding-block: $space-8em;
+	padding-block: 8rem;
 }
 .projects {
-	padding-block: $space-8em;
+	padding-block: 8rem;
+}
+.contact {
+	padding-block: 8rem;
+	&__wrapper {
+		width: 100%;
+		gap: 2rem;
+	}
 }
 .section__info {
-	gap: $space-2em;
+	gap: 2rem;
 	align-items: stretch;
 }
 .section__projects {
