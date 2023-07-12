@@ -459,29 +459,46 @@
 			</h2>
 			<div class="contact__wrapper row wrap">
 				<div class="contact-box">
-					<h3 class="contact-box__title font-p font-p--big">Name:</h3>
+					<label class="contact-box__title font-p font-p--big" for="name"
+						>Name:</label
+					>
 					<input
 						class="contact-box__input font-p font-p--big"
+						name="name"
+						id="name"
 						type="email"
 						placeholder="your name here"
 					/>
 				</div>
 				<div class="contact-box">
-					<h3 class="contact-box__title font-p font-p--big">Mail:</h3>
+					<label class="contact-box__title font-p font-p--big" for="mail"
+						>Mail:</label
+					>
 					<input
-						class="contact-box__input font-p font-p--big"
+						class="contact-box__input contact-box__input--pattern font-p font-p--big"
+						name="mail"
+						id="mail"
 						type="text"
-						placeholder="yourmail@example.com"
+						placeholder="youremail@example.com"
 						pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 					/>
 				</div>
 				<div class="contact-box">
-					<h3 class="contact-box__title font-p font-p--big">Message:</h3>
-					<input
+					<label class="contact-box__title font-p font-p--big" for="message"
+						>Message:</label
+					>
+					<textarea
 						class="contact-box__input contact-box__input--large font-p font-p--big"
-						type="text"
+						name="message"
+						id="message"
+						rows="5"
 						placeholder="your message here :)"
-					/>
+					></textarea>
+				</div>
+				<div class="contact__btn-wrapper row">
+					<a class="button font-h2 font-h2--small" href="#">
+						Send
+					</a>
 				</div>
 			</div>
 		</section>

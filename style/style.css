@@ -421,6 +421,10 @@ img {
   width: 100%;
   gap: 2rem;
 }
+.contact__btn-wrapper {
+  width: 100%;
+  justify-content: flex-end;
+}
 
 .section__info {
   gap: 2rem;
@@ -640,6 +644,7 @@ img {
   border: 1px solid #52C4C4;
 }
 .contact-box__title {
+  display: block;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -656,12 +661,24 @@ img {
   border: 1px solid #52C4C4;
   background: #d9d9d9;
   padding: 0.25rem 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .contact-box__input:focus {
   color: #15162A;
 }
-.contact-box__input--large {
-  min-height: 10rem;
+.contact-box__input--pattern:invalid {
+  border-color: red;
+}
+.contact-box__input--pattern:invalid + span {
+  display: block;
+  margin-top: 6px;
+}
+.contact-box__input--pattern:invalid + span::after {
+  content: "Please check your email";
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: red;
 }
 
 .top-navbar__links__item:hover::after {

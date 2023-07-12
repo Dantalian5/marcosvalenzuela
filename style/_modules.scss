@@ -191,10 +191,11 @@
 
 .contact-box {
 	position: relative;
-	padding: 0rem .5rem .5rem .5rem;
+	padding: 0rem 0.5rem 0.5rem 0.5rem;
 	border-radius: 0.5rem;
 	border: 1px solid $c-green-cyan;
 	&__title {
+		display: block;
 		position: relative;
 		width: fit-content;
 		max-width: 16rem;
@@ -210,11 +211,23 @@
 		border: 1px solid $c-green-cyan;
 		background: #d9d9d9;
 		padding: 0.25rem 1rem;
-		&:focus{
+		word-wrap: break-word;
+		word-break: break-all;
+		&:focus {
 			color: $c-dark-blue;
 		}
-		&--large{
-			min-height: 10rem;
+		&--pattern:invalid {
+			border-color: red;
+			& + span {
+				display: block;
+				margin-top: 6px;
+				&::after {
+					content: "Please check your email";
+					font-weight: 400;
+					font-size: 0.75rem;
+					color: red;
+				}
+			}
 		}
 	}
 }
