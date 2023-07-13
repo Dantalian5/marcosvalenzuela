@@ -397,21 +397,14 @@ img {
   padding-block: 2rem;
 }
 
-.about {
+.about,
+.skills,
+.projects,
+.contact,
+.footer {
   padding-block: 8rem;
 }
 
-.skills {
-  padding-block: 8rem;
-}
-
-.projects {
-  padding-block: 8rem;
-}
-
-.contact {
-  padding-block: 8rem;
-}
 .contact__wrapper {
   width: 100%;
   gap: 2rem;
@@ -422,7 +415,6 @@ img {
 }
 
 .footer {
-  padding-block: 8rem;
   flex-direction: column;
   gap: 2.5rem;
 }
@@ -440,7 +432,6 @@ img {
 
 .section__projects {
   position: relative;
-  display: flex;
   margin-inline: auto;
   width: -moz-fit-content;
   width: fit-content;
@@ -452,52 +443,6 @@ img {
   overflow-y: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-}
-
-.section__markers {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-inline: auto;
-  gap: 0.5rem;
-}
-.section__markers__item {
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.section__markers__item > * {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: #EAEAEA;
-  border: 2px solid #52C4C4;
-  cursor: pointer;
-}
-.section__markers::before {
-  position: absolute;
-  content: "<-";
-  top: 50%;
-  left: -1rem;
-  transform: translate(-100%, -60%);
-  font-family: "Fira Code", monospace;
-  color: #EAEAEA;
-  font-size: 1.5rem;
-  z-index: 2;
-}
-.section__markers::after {
-  position: absolute;
-  content: "->";
-  top: 50%;
-  right: -1rem;
-  transform: translate(100%, -60%);
-  font-family: "Fira Code", monospace;
-  color: #EAEAEA;
-  font-size: 1.5rem;
-  z-index: 2;
 }
 
 .font-h1,
@@ -612,21 +557,26 @@ img {
 
 .styled-box {
   position: relative;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   border: 1px solid #52C4C4;
+  border-radius: 0.5rem;
+  padding-top: 0;
 }
 .styled-box__title {
-  position: absolute;
-  top: 0;
-  left: 1.5rem;
-  transform: translate(0, -50%);
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  display: block;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  transform: translate(0, -0.8em);
   padding-inline: 0.5rem;
   background: #15162A;
 }
-.styled-box__skill-items {
+
+.skill-wrapper {
+  padding-block: 0 1.5rem;
+  padding-inline: 1.5rem;
+}
+.skill-wrapper__items {
   gap: 2rem;
 }
 
@@ -639,23 +589,11 @@ img {
 }
 
 .project-card {
-  position: relative;
   padding-block: 0rem 1rem;
   padding-inline: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid #52C4C4;
   min-width: 18.75rem;
   width: 18.75rem;
   scroll-snap-align: center;
-}
-.project-card__title {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
-  transform: translate(0, -0.8em);
-  padding-inline: 0.5rem;
-  background: #15162A;
 }
 .project-card__image-wrapper {
   position: relative;
@@ -699,21 +637,47 @@ img {
   transform: translate(100%, -50%);
 }
 
-.contact-box {
-  position: relative;
-  padding: 0rem 0.5rem 0.5rem 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid #52C4C4;
-}
-.contact-box__title {
-  display: block;
+.projects__nav {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 16rem;
-  transform: translate(0, -0.8em);
+  margin-inline: auto;
+  gap: 0.5rem;
+}
+.projects__nav__item {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #EAEAEA;
+  border: 2px solid #52C4C4;
+}
+.projects__nav::before {
+  position: absolute;
+  content: "<-";
+  top: 50%;
+  left: -1rem;
+  transform: translate(-100%, -60%);
+  font-family: "Fira Code", monospace;
+  color: #EAEAEA;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+.projects__nav::after {
+  position: absolute;
+  content: "->";
+  top: 50%;
+  right: -1rem;
+  transform: translate(100%, -60%);
+  font-family: "Fira Code", monospace;
+  color: #EAEAEA;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.contact-box {
+  padding-block: 0 0.5rem;
   padding-inline: 0.5rem;
-  background: #15162A;
 }
 .contact-box__input {
   outline: none;

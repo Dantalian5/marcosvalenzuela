@@ -26,7 +26,7 @@
 		font-size: 1rem;
 	}
 	&--small {
-		font-size: .875rem;
+		font-size: 0.875rem;
 	}
 }
 .button {
@@ -106,19 +106,23 @@
 }
 .styled-box {
 	position: relative;
-	padding: 1.5rem;
-	border-radius: 0.5rem;
 	border: 1px solid $c-green-cyan;
+	border-radius: 0.5rem;
+	padding-top: 0;
 	&__title {
-		position: absolute;
-		top: 0;
-		left: 1.5rem;
-		transform: translate(0, -50%);
-		max-width: fit-content;
+		display: block;
+		position: relative;
+		width: fit-content;
+		max-width: 100%;
+		transform: translate(0, -0.8em);
 		padding-inline: 0.5rem;
 		background: $c-dark-blue;
 	}
-	&__skill-items {
+}
+.skill-wrapper {
+	padding-block: 0 1.5rem;
+	padding-inline: 1.5rem;
+	&__items {
 		gap: 2rem;
 	}
 }
@@ -130,33 +134,12 @@
 	}
 }
 .project-card {
-	position: relative;
-	//padding: 3rem 1rem 1rem 1rem;
 	padding-block: 0rem 1rem;
 	padding-inline: 1rem;
-	border-radius: 0.5rem;
-	border: 1px solid $c-green-cyan;
 
 	min-width: 18.75rem;
 	width: 18.75rem;
 	scroll-snap-align: center;
-	&__title {
-		// position: absolute;
-		// top: 0;
-		// left: 1.5rem;
-		// width: fit-content;
-		// max-width: 16rem;
-		// transform: translate(0, -0.85em);
-		// padding-inline: 0.5rem;
-		// background: $c-dark-blue;
-
-		position: relative;
-		width: fit-content;
-		max-width: 100%;
-		transform: translate(0, -0.8em);
-		padding-inline: 0.5rem;
-		background: $c-dark-blue;
-	}
 	&__image-wrapper {
 		position: relative;
 		width: 100%;
@@ -191,7 +174,7 @@
 		display: block;
 		width: fit-content;
 		position: relative;
-		padding-right: .5rem;
+		padding-right: 0.5rem;
 	}
 	&__live-icon {
 		position: absolute;
@@ -200,21 +183,45 @@
 		transform: translate(100%, -50%);
 	}
 }
-
-.contact-box {
+.projects__nav {
 	position: relative;
-	padding: 0rem 0.5rem 0.5rem 0.5rem;
-	border-radius: 0.5rem;
-	border: 1px solid $c-green-cyan;
-	&__title {
+	width: fit-content;
+	margin-inline: auto;
+	gap: 0.5rem;
+	&__item {
 		display: block;
-		position: relative;
-		width: fit-content;
-		max-width: 16rem;
-		transform: translate(0, -0.8em);
-		padding-inline: 0.5rem;
-		background: $c-dark-blue;
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		background: $c-ghost-white;
+		border: 2px solid $c-green-cyan;
 	}
+	&::before {
+		position: absolute;
+		content: "<-";
+		top: 50%;
+		left: -1rem;
+		transform: translate(-100%, -60%);
+		font-family: $f_family-firacode;
+		color: $c-ghost-white;
+		font-size: 1.5rem;
+		z-index: 2;
+	}
+	&::after {
+		position: absolute;
+		content: "->";
+		top: 50%;
+		right: -1rem;
+		transform: translate(100%, -60%);
+		font-family: $f_family-firacode;
+		color: $c-ghost-white;
+		font-size: 1.5rem;
+		z-index: 2;
+	}
+}
+.contact-box {
+	padding-block: 0 0.5rem;
+	padding-inline: 0.5rem;
 	&__input {
 		outline: none;
 		color: rgba(0, 0, 0, 0.3);
@@ -243,6 +250,6 @@
 		}
 	}
 }
-.logo{
+.logo {
 	width: 2.5rem;
 }

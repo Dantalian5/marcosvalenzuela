@@ -2,7 +2,6 @@
 	--section-inline-value: 4%;
 	--section-inline-padding: clamp(1rem, var(--section-inline-value), 8rem);
 }
-
 .row {
 	display: flex;
 	align-items: center;
@@ -17,7 +16,6 @@
 		flex: 1 1 auto;
 	}
 }
-
 .section {
 	max-width: 90rem;
 	padding-inline: var(--section-inline-padding);
@@ -41,17 +39,14 @@
 	gap: 1rem;
 	padding-block: 2rem;
 }
-.about {
-	padding-block: 8rem;
-}
-.skills {
-	padding-block: 8rem;
-}
-.projects {
+.about,
+.skills,
+.projects,
+.contact,
+.footer {
 	padding-block: 8rem;
 }
 .contact {
-	padding-block: 8rem;
 	&__wrapper {
 		width: 100%;
 		gap: 2rem;
@@ -62,7 +57,6 @@
 	}
 }
 .footer {
-	padding-block: 8rem;
 	flex-direction: column;
 	gap: 2.5rem;
 	&__logo {
@@ -78,7 +72,6 @@
 }
 .section__projects {
 	position: relative;
-	display: flex;
 	margin-inline: auto;
 	width: fit-content;
 	max-width: 100%;
@@ -89,45 +82,4 @@
 	overflow-y: scroll;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-}
-.section__markers {
-	position: relative;
-	width: fit-content;
-	margin-inline: auto;
-	gap: 0.5rem;
-	&__item {
-		display: block;
-		width: fit-content;
-		& > * {
-			appearance: none;
-			width: 0.75rem;
-			height: 0.75rem;
-			border-radius: 50%;
-			background: $c-ghost-white;
-			border: 2px solid $c-green-cyan;
-			cursor: pointer;
-		}
-	}
-	&::before {
-		position: absolute;
-		content: "<-";
-		top: 50%;
-		left: -1rem;
-		transform: translate(-100%, -60%);
-		font-family: $f_family-firacode;
-		color: $c-ghost-white;
-		font-size: 1.5rem;
-		z-index: 2;
-	}
-	&::after {
-		position: absolute;
-		content: "->";
-		top: 50%;
-		right: -1rem;
-		transform: translate(100%, -60%);
-		font-family: $f_family-firacode;
-		color: $c-ghost-white;
-		font-size: 1.5rem;
-		z-index: 2;
-	}
 }
