@@ -439,12 +439,65 @@ img {
 }
 
 .section__projects {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  padding: 2rem;
+  align-items: stretch;
   gap: 4rem;
   align-self: stretch;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.section__markers {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  gap: 0.5rem;
+}
+.section__markers__item {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.section__markers__item > * {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #EAEAEA;
+  border: 2px solid #52C4C4;
+  cursor: pointer;
+}
+.section__markers::before {
+  position: absolute;
+  content: "<-";
+  top: 50%;
+  left: -1rem;
+  transform: translate(-100%, -60%);
+  font-family: "Fira Code", monospace;
+  color: #EAEAEA;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+.section__markers::after {
+  position: absolute;
+  content: "->";
+  top: 50%;
+  right: -1rem;
+  transform: translate(100%, -60%);
+  font-family: "Fira Code", monospace;
+  color: #EAEAEA;
+  font-size: 1.5rem;
+  z-index: 2;
 }
 
 .font-h1,
@@ -591,7 +644,9 @@ img {
   padding-inline: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #52C4C4;
+  min-width: 18.75rem;
   width: 18.75rem;
+  scroll-snap-align: center;
 }
 .project-card__title {
   position: relative;
