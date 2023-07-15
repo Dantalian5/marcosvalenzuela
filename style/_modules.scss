@@ -29,6 +29,7 @@
 		font-size: 0.875rem;
 	}
 }
+//-----------------------------------------------------------
 .button {
 	display: flex;
 	justify-content: center;
@@ -48,7 +49,7 @@
 	justify-content: space-between;
 	background: $c-dark-blue;
 	padding-block: 1rem;
-	z-index: 10;
+	padding-inline: var(--section-inline-padding);
 	&__logo {
 		&__arrow {
 			color: $c-green-cyan;
@@ -58,21 +59,89 @@
 		}
 	}
 }
-//-------------------------------------------------------------------
-.hero__info {
-	padding-left: calc(2rem + 0.25rem);
-	& > :not(:last-child) {
-		margin-bottom: 1rem;
+.hamburger {
+	&__checkbox {
+		opacity: 0;
+		z-index: -1;
+		position: absolute;
+		cursor: pointer;
 	}
-	&__text {
+	&__icon {
+		cursor: pointer;
+		display: block;
+	}
+	&__line {
+		transition: y 300ms ease-in 300ms, transform 300ms ease-in,
+			opacity 0ms 300ms;
+		transform-origin: center;
+	}
+}
+#hamburger:checked ~ .hamburger__icon .hamburger {
+	&__line {
+		transition: y 300ms ease-in, transform 300ms ease-in 300ms,
+			opacity 0ms 300ms;
+	}
+	&__top,
+	&__bottom {
+		y: 10.75px;
+	}
+	&__top {
+		transform: rotate(45deg);
+	}
+	&__middle {
+		opacity: 0;
+	}
+	&__bottom {
+		transform: rotate(-45deg);
+	}
+}
+.menubar {
+	&__wrapper {		
+		position: absolute;
+		visibility: hidden;
+		top: 100%;
+		right: 0;
+		transform: translate(0, -100%);
+		width: fit-content;
+		padding: 2rem;
+		background: $c-dark-blue;
+		flex-direction: column;
+		align-items: stretch;
+		z-index: -1;
+		transition: 300ms ease-in;
+		border: 1px solid $c-green-cyan;
+		border-radius: 0.5rem;
+		gap: 2rem;
+	}
+}
+
+#hamburger:checked ~ .menubar__wrapper {
+	transform: translate(0, 0);
+	visibility: visible;
+	transition: 300ms ease-in;
+}
+//-------------------------------------------------------------------
+.hero {
+	&__info {
+		padding-left: calc(2rem + 0.25rem);
 		& > :not(:last-child) {
 			margin-bottom: 1rem;
 		}
+		&__text {
+			& > :not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+		&__cta {
+			padding-block: 1.5rem;
+			padding-right: 2rem;
+			gap: 2rem;
+		}
 	}
-	&__cta {
-		padding-block: 1.5rem;
-		padding-right: 2rem;
-		gap: 2rem;
+	&__img {
+		min-width: 20rem;
+		max-width: 35rem;
+		margin-inline: auto;
 	}
 }
 .guides {
@@ -90,9 +159,6 @@
 		border-left: 1px dotted $c-green-cyan;
 	}
 }
-.hero__img {
-}
-
 .info-block {
 	padding-inline: calc(2rem + 0.25rem) 2rem;
 	& > :not(:last-child) {
@@ -196,27 +262,23 @@
 		background: $c-ghost-white;
 		border: 2px solid $c-green-cyan;
 	}
-	&::before {
-		position: absolute;
-		content: "<-";
-		top: 50%;
-		left: -1rem;
-		transform: translate(-100%, -60%);
-		font-family: $f_family-firacode;
-		color: $c-ghost-white;
-		font-size: 1.5rem;
-		z-index: 2;
-	}
+	&::before,
 	&::after {
 		position: absolute;
-		content: "->";
 		top: 50%;
-		right: -1rem;
-		transform: translate(100%, -60%);
 		font-family: $f_family-firacode;
 		color: $c-ghost-white;
 		font-size: 1.5rem;
-		z-index: 2;
+	}
+	&::before {
+		content: "<-";
+		left: -1rem;
+		transform: translate(-100%, -50%);
+	}
+	&::after {
+		content: "->";
+		right: -1rem;
+		transform: translate(100%, -50%);
 	}
 }
 .contact-box {

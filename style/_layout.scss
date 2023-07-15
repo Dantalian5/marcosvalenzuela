@@ -16,25 +16,29 @@
 		flex: 1 1 auto;
 	}
 }
-.section {
+.navbar,
+.section{
 	max-width: 90rem;
-	padding-inline: var(--section-inline-padding);
 	margin-inline: auto;
+}
+.navbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.section {
+	padding-inline: var(--section-inline-padding);
 	overflow: hidden;
-	z-index: 5;
+	z-index: 0;
 	//&:not(.navbar) {
 	//min-height: 100vh;
 	//min-height: 100svh;
 	//scroll-snap-align: start;
 	//}
 }
-//-----------------
-.navbar {
-	position: sticky;
-	top: 0;
-	left: 0;
-	right: 0;
-}
+
 .header {
 	gap: 1rem;
 	padding-block: 2rem;

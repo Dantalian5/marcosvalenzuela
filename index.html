@@ -40,7 +40,7 @@
 		<link rel="stylesheet" href="style/style.css" />
 	</head>
 	<body>
-		<div class="section navbar">
+		<div class="navbar">
 			<nav class="top-navbar row">
 				<div class="top-navbar__logo row font-h2">
 					<svg
@@ -60,28 +60,67 @@
 				<!-- <div class="top-navbar__icon row">
 					<img src="assets/base/mylogo.svg" alt="logo" />
 				</div> -->
-				<ul class="top-navbar__links row">
-					<li class="top-navbar__links__item row font-h2 font-h2--big">
+				<div class="menubar">
+					<input
+						class="hamburger__checkbox"
+						type="checkbox"
+						id="hamburger"
+						aria-label="Toggle Navigation"
+					/>
+					<label for="hamburger"
+					class="hamburger__icon">
 						<svg
+							class="hamburger__box font-h2 font-h2--big"
 							xmlns="http://www.w3.org/2000/svg"
 							width="1.5em"
 							height="1.5em"
 							viewBox="0 0 24 24"
+							fill="currentColor"
 						>
-							<path
-								fill="none"
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M6 8h12M6 12h12M6 16h12"
-							/>
+							<rect
+								class="hamburger__line hamburger__top"
+								width="20"
+								height="2.5"
+								x="2"
+								y="4.75"
+								rx="2"
+							></rect>
+							<rect
+								class="hamburger__line hamburger__middle"
+								width="20"
+								height="2.5"
+								x="2"
+								y="10.75"
+								rx="2"
+							></rect>
+							<rect
+								class="hamburger__line hamburger__bottom"
+								width="20"
+								height="2.5"
+								x="2"
+								y="16.75"
+								rx="2"
+							></rect>
 						</svg>
-					</li>
-				</ul>
+					</label>
+					<ul class="menubar__wrapper row">
+						<li class="menubar__link font-h2 font-h2--big">
+							<a href="#about">About/</a>
+						</li>
+						<li class="menubar__link font-h2 font-h2--big">
+							<a href="#skills">Skills/</a>
+						</li>
+						<li class="menubar__link font-h2 font-h2--big">
+							<a href="#projects">Projects/</a>
+						</li>
+						<li class="menubar__link font-h2 font-h2--big">
+							<a href="#contact">Contact/</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</div>
-		<header class="section header row wrap">
+		<header id="header" class="section header row wrap">
 			<div class="hero__info">
 				<div class="hero__info__text">
 					<p class="font-p font-p--big">
@@ -123,7 +162,7 @@
 				/>
 			</div>
 		</header>
-		<section class="section about row wrap">
+		<section id="about" class="section about row wrap">
 			<div class="info-block">
 				<h2 class="info-block__title font-h2 font-h2--big">
 					<span class="guides"></span>About Me
@@ -147,7 +186,7 @@
 				</p>
 			</div>
 		</section>
-		<section class="section skills">
+		<section id="skills" class="section skills">
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>Skills
 			</h2>
@@ -260,7 +299,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section projects">
+		<section id="projects" class="section projects">
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>Projects
 			</h2>
@@ -479,7 +518,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="section contact">
+		<section id="contact" class="section contact">
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>Contact me
 			</h2>
