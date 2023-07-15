@@ -99,26 +99,36 @@
 	&__wrapper {		
 		position: absolute;
 		visibility: hidden;
-		top: 100%;
-		right: 0;
-		transform: translate(0, -100%);
+		top: 50vh;
+		top: 50svh;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		width: fit-content;
-		padding: 2rem;
+		max-height: 0px;
+		padding-block: 0;
+		padding-inline: 4rem;
 		background: $c-dark-blue;
 		flex-direction: column;
 		align-items: stretch;
 		z-index: -1;
-		transition: 300ms ease-in;
+		transition: 500ms;
 		border: 1px solid $c-green-cyan;
 		border-radius: 0.5rem;
 		gap: 2rem;
+		box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, .25);
+		overflow: hidden;
+	}
+	&__link > a::after{
+		content: '/';
 	}
 }
 
 #hamburger:checked ~ .menubar__wrapper {
-	transform: translate(0, 0);
 	visibility: visible;
-	transition: 300ms ease-in;
+	transition: 500ms;
+    max-height: 100vh;
+	max-height: 100svh;
+	padding-block: 4rem;
 }
 //-------------------------------------------------------------------
 .hero {
