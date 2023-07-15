@@ -408,7 +408,7 @@ img {
 }
 
 .header {
-  gap: 1rem;
+  gap: 2rem;
   padding-block: 2rem;
 }
 
@@ -420,7 +420,17 @@ img {
   padding-block: 8rem;
 }
 
+.skills__info {
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
+}
+
 .contact__wrapper {
+  width: 100%;
+  gap: 2rem;
+}
+.contact__wrapper__inner {
   width: 100%;
   gap: 2rem;
 }
@@ -430,21 +440,22 @@ img {
 }
 
 .footer {
-  flex-direction: column;
   gap: 2.5rem;
+  justify-content: center;
+}
+.footer__logo, .footer__extra {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .footer__logo {
   gap: 0.5rem;
 }
 .footer__icon-wrapper {
+  justify-content: center;
+  width: 100%;
+  margin-inline: auto;
   gap: 2rem;
 }
-
-.section__info {
-  gap: 2rem;
-  align-items: stretch;
-}
-
 .section__projects {
   position: relative;
   margin-inline: auto;
@@ -460,6 +471,20 @@ img {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 37.5rem) {
+  :root {
+    --section-inline-value: 6%;
+  }
+}
+@media (min-width: 62.5rem) {
+  :root {
+    --section-inline-value: 12%;
+  }
+  .footer__icon-wrapper {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
 .font-h1,
 .font-h2,
 .font-p {
@@ -559,8 +584,8 @@ img {
 .menubar__wrapper {
   position: absolute;
   visibility: hidden;
-  top: 50vh;
-  top: 50svh;
+  top: calc(50vh + 50%);
+  top: calc(50svh + 50%);
   left: 50%;
   transform: translate(-50%, -50%);
   width: -moz-fit-content;
@@ -577,7 +602,7 @@ img {
   border-radius: 0.5rem;
   gap: 2rem;
   box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+  overflow: scroll;
 }
 .menubar__link > a::after {
   content: "/";
@@ -587,12 +612,14 @@ img {
   visibility: visible;
   transition: 500ms;
   max-height: 100vh;
-  max-height: 100svh;
+  max-height: calc(100svh - 100%);
   padding-block: 4rem;
 }
 
 .hero__info {
   padding-left: 2.25rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .hero__info > :not(:last-child) {
   margin-bottom: 1rem;
@@ -661,12 +688,15 @@ img {
 .skill-wrapper {
   padding-block: 0 1.5rem;
   padding-inline: 1.5rem;
+  flex-basis: 15rem;
+  max-width: 30rem;
 }
 .skill-wrapper__items {
   gap: 2rem;
 }
 
 .skill-box {
+  flex-basis: 40%;
   gap: 0.5rem;
 }
 .skill-box__icon {
@@ -777,21 +807,62 @@ img {
 .contact-box__input--pattern:invalid {
   border-color: red;
 }
-.contact-box__input--pattern:invalid + span {
-  display: block;
-  margin-top: 6px;
-}
-.contact-box__input--pattern:invalid + span::after {
-  content: "Please check your email";
-  font-weight: 400;
-  font-size: 0.75rem;
-  color: red;
-}
 
 .logo {
   width: 2.5rem;
 }
 
+@media (min-width: 37.5rem) {
+  .font-h1 {
+    font-size: 3.25rem;
+  }
+}
+@media (min-width: 62.5rem) {
+  .font-p--big {
+    font-size: 1.125rem;
+  }
+  .top-navbar {
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    background: #15162A;
+    padding-block: 1rem;
+    padding-inline: var(--section-inline-padding);
+  }
+  .top-navbar__logo__arrow {
+    color: #52C4C4;
+  }
+  .top-navbar__logo__text {
+    margin-left: 0.5rem;
+  }
+  .hamburger__checkbox {
+    display: none;
+  }
+  .hamburger__icon {
+    display: none;
+  }
+  .menubar__wrapper {
+    position: static;
+    visibility: visible;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-height: 100%;
+    padding-block: 0;
+    padding-inline: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    transition: none;
+    transform: translate(0, 0);
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    overflow: auto;
+  }
+  .menubar__link {
+    font-size: 1.25rem;
+  }
+}
 .top-navbar__links__item:hover::after {
   animation: 1s steps(1) infinite blink;
 }

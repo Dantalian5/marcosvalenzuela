@@ -96,11 +96,11 @@
 	}
 }
 .menubar {
-	&__wrapper {		
+	&__wrapper {
 		position: absolute;
 		visibility: hidden;
-		top: 50vh;
-		top: 50svh;
+		top: calc(50vh + 50%);
+		top: calc(50svh + 50%);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: fit-content;
@@ -115,25 +115,26 @@
 		border: 1px solid $c-green-cyan;
 		border-radius: 0.5rem;
 		gap: 2rem;
-		box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, .25);
-		overflow: hidden;
+		box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.25);
+		overflow: scroll;
 	}
-	&__link > a::after{
-		content: '/';
+	&__link > a::after {
+		content: "/";
 	}
 }
 
 #hamburger:checked ~ .menubar__wrapper {
 	visibility: visible;
 	transition: 500ms;
-    max-height: 100vh;
-	max-height: 100svh;
+	max-height: 100vh;
+	max-height: calc(100svh - 100%);
 	padding-block: 4rem;
 }
 //-------------------------------------------------------------------
 .hero {
 	&__info {
 		padding-left: calc(2rem + 0.25rem);
+		max-width: fit-content;
 		& > :not(:last-child) {
 			margin-bottom: 1rem;
 		}
@@ -198,11 +199,14 @@
 .skill-wrapper {
 	padding-block: 0 1.5rem;
 	padding-inline: 1.5rem;
+	flex-basis: 15rem;
+	max-width: 30rem;
 	&__items {
 		gap: 2rem;
 	}
 }
 .skill-box {
+	flex-basis: 40%;
 	gap: 0.5rem;
 	&__icon {
 		line-height: 0;
@@ -309,19 +313,67 @@
 		}
 		&--pattern:invalid {
 			border-color: red;
-			& + span {
-				display: block;
-				margin-top: 6px;
-				&::after {
-					content: "Please check your email";
-					font-weight: 400;
-					font-size: 0.75rem;
-					color: red;
-				}
-			}
 		}
 	}
 }
 .logo {
 	width: 2.5rem;
+}
+@media (min-width: 37.5rem) {
+	.font-h1 {
+		font-size: 3.25rem;
+	}
+}
+@media (min-width: 62.5rem) {
+	.font-p {
+		&--big {
+			font-size: 1.125rem;
+		}
+	}
+	.top-navbar {
+		width: 100%;
+		align-items: stretch;
+		justify-content: space-between;
+		background: $c-dark-blue;
+		padding-block: 1rem;
+		padding-inline: var(--section-inline-padding);
+		&__logo {
+			&__arrow {
+				color: $c-green-cyan;
+			}
+			&__text {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+	.hamburger {
+		&__checkbox {
+			display: none;
+		}
+		&__icon {
+			display: none;
+		}
+	}
+	.menubar {
+		&__wrapper {
+			position: static;
+			visibility: visible;
+			width: fit-content;
+			max-height: 100%;
+			padding-block: 0;
+			padding-inline: 0;
+			flex-direction: row;
+			align-items: center;
+			gap: 2rem;
+			transition: none;
+			transform: translate(0, 0);
+			box-shadow: none;
+			border: none;
+			border-radius: none;
+			overflow: auto;
+		}
+		&__link{
+			font-size: 1.25rem;
+		}
+	}
 }
