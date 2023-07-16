@@ -1,4 +1,4 @@
-.sotolined{
+.sotolined {
 	position: relative;
 	&::before {
 		content: "";
@@ -12,26 +12,26 @@
 		transform: translate(-50%, 100%);
 		transition: 300ms;
 	}
-	&:hover{
+	&:hover {
 		&::before {
 			visibility: visible;
 			width: 100%;
 		}
 	}
 }
-.blinked{
-	&:hover{
+.blinked {
+	&:hover {
 		&::after {
 			animation: 1s steps(1) infinite blink;
 		}
-	}	
+	}
 }
-.blink{
-	animation: 1s steps(1) infinite blink;	
+.blink {
+	animation: 1s steps(1) infinite blink;
 }
-.button{
+.button {
 	position: relative;
-	&__text{
+	&__text {
 		position: relative;
 		&::after {
 			content: "";
@@ -46,22 +46,22 @@
 			transition: 300ms;
 		}
 	}
-	&:hover{
-		& .button__text{
-			&::after{
+	&:hover {
+		& .button__text {
+			&::after {
 				visibility: visible;
 				width: 100%;
 			}
 		}
 		border-color: $c-green-cyan;
-	}	
+	}
 }
-.social-link:hover{
+.social-link:hover {
 	color: $c-green-cyan;
 	transform: scale(1.2);
 }
-.footer__extra{
-	&:hover{
+.footer__extra {
+	&:hover {
 		color: $c-green-cyan;
 	}
 }
