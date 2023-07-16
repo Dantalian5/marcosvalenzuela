@@ -339,6 +339,7 @@ a {
 }
 
 a {
+  cursor: pointer;
   color: inherit;
 }
 
@@ -348,10 +349,19 @@ a:visited {
           appearance: none;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   min-height: 100vh;
   min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
   background: #15162A;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 img,
@@ -405,6 +415,11 @@ img {
   padding-inline: var(--section-inline-padding);
   overflow: hidden;
   z-index: 0;
+  scroll-snap-align: start;
+}
+.section:not(.footer) {
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .header {
@@ -684,6 +699,13 @@ img {
   padding-inline: 0.5rem;
   background: #15162A;
 }
+.styled-box__title--centered {
+  margin-inline: auto;
+  width: 100%;
+}
+.styled-box__title--centered > * {
+  text-align: center;
+}
 
 .skill-wrapper {
   padding-block: 0 1.5rem;
@@ -812,12 +834,15 @@ img {
   width: 2.5rem;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 43.75rem) {
   .font-h1 {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 62.5rem) {
+  .font-h1 {
+    font-size: 3.25rem;
+  }
   .font-p--big {
     font-size: 1.125rem;
   }
@@ -856,15 +881,70 @@ img {
     transform: translate(0, 0);
     box-shadow: none;
     border: none;
-    border-radius: none;
-    overflow: auto;
+    border-radius: 0;
+    overflow: visible;
   }
   .menubar__link {
     font-size: 1.25rem;
   }
 }
-.top-navbar__links__item:hover::after {
+.sotolined {
+  position: relative;
+}
+.sotolined::before {
+  content: "";
+  visibility: hidden;
+  width: 0%;
+  height: 0;
+  border: 1px solid #52C4C4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: 300ms;
+}
+.sotolined:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.blinked:hover::after {
   animation: 1s steps(1) infinite blink;
+}
+
+.button {
+  position: relative;
+}
+.button__text {
+  position: relative;
+}
+.button__text::after {
+  content: "";
+  visibility: hidden;
+  width: 0%;
+  height: 0;
+  border: 1px solid #52C4C4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: 300ms;
+}
+.button:hover {
+  border-color: #52C4C4;
+}
+.button:hover .button__text::after {
+  visibility: visible;
+  width: 100%;
+}
+
+.social-link:hover {
+  color: #52C4C4;
+  transform: scale(1.2);
+}
+
+.footer__extra:hover {
+  color: #52C4C4;
 }
 
 @keyframes blink {

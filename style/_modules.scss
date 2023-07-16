@@ -194,6 +194,13 @@
 		transform: translate(0, -0.8em);
 		padding-inline: 0.5rem;
 		background: $c-dark-blue;
+		&--centered {
+			margin-inline: auto;
+			width: 100%;
+			& > * {
+				text-align: center;
+			}
+		}
 	}
 }
 .skill-wrapper {
@@ -319,12 +326,15 @@
 .logo {
 	width: 2.5rem;
 }
-@media (min-width: 37.5rem) {
+@media (min-width: 43.75rem) {
 	.font-h1 {
-		font-size: 3.25rem;
+		font-size: 3rem;
 	}
 }
 @media (min-width: 62.5rem) {
+	.font-h1 {
+		font-size: 3.25rem;
+	}
 	.font-p {
 		&--big {
 			font-size: 1.125rem;
@@ -369,10 +379,10 @@
 			transform: translate(0, 0);
 			box-shadow: none;
 			border: none;
-			border-radius: none;
-			overflow: auto;
+			border-radius: 0;
+			overflow: visible;
 		}
-		&__link{
+		&__link {
 			font-size: 1.25rem;
 		}
 	}

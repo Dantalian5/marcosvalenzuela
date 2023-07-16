@@ -32,11 +32,11 @@
 	padding-inline: var(--section-inline-padding);
 	overflow: hidden;
 	z-index: 0;
-	//&:not(.navbar) {
-	//min-height: 100vh;
-	//min-height: 100svh;
-	//scroll-snap-align: start;
-	//}
+	&:not(.footer) {
+		min-height: 100vh;
+		min-height: 100svh;
+	}
+	scroll-snap-align: start;
 }
 
 .header {
@@ -61,7 +61,7 @@
 	&__wrapper {
 		width: 100%;
 		gap: 2rem;
-		&__inner{
+		&__inner {
 			width: 100%;
 			gap: 2rem;
 		}
@@ -75,7 +75,7 @@
 	gap: 2.5rem;
 	justify-content: center;
 	&__logo,
-	&__extra{
+	&__extra {
 		max-width: fit-content;
 	}
 	&__logo {
@@ -84,10 +84,10 @@
 	&__icon-wrapper {
 		justify-content: center;
 		width: 100%;
-		margin-inline: auto;		
+		margin-inline: auto;
 		gap: 2rem;
 	}
-	&__extra{
+	&__extra {
 	}
 }
 .section__projects {
@@ -103,18 +103,18 @@
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 }
-@media (min-width:37.5rem){
+@media (min-width: 37.5rem) {
 	:root {
 		--section-inline-value: 6%;
-	}	
+	}
 }
-@media (min-width:62.5rem){
+@media (min-width: 62.5rem) {
 	:root {
 		--section-inline-value: 12%;
 	}
 	.footer {
-		&__icon-wrapper{
+		&__icon-wrapper {
 			max-width: fit-content;
 		}
-	}	
+	}
 }
