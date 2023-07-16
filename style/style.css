@@ -334,6 +334,13 @@ a {
   src: url(../assets/fonts/FiraCode-Bold.ttf);
   font-display: swap;
 }
+@font-face {
+  font-family: "ocr";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../assets/fonts/ocr-font-500.ttf);
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
@@ -349,19 +356,10 @@ a:visited {
           appearance: none;
 }
 
-html {
-  overflow: hidden;
-}
-
 body {
   min-height: 100vh;
   min-height: 100svh;
-  height: 100vh;
-  height: 100svh;
   background: #15162A;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
 }
 
 img,
@@ -415,11 +413,6 @@ img {
   padding-inline: var(--section-inline-padding);
   overflow: hidden;
   z-index: 0;
-  scroll-snap-align: start;
-}
-.section:not(.footer) {
-  min-height: 100vh;
-  min-height: 100svh;
 }
 
 .header {
@@ -432,7 +425,7 @@ img {
 .projects,
 .contact,
 .footer {
-  padding-block: 8rem;
+  padding-block: 4rem 8rem;
 }
 
 .skills__info {
@@ -563,6 +556,7 @@ img {
 }
 .top-navbar__logo__text {
   margin-left: 0.5rem;
+  line-height: 1;
 }
 
 .hamburger__checkbox {
@@ -678,7 +672,7 @@ img {
 
 .section-title {
   padding-left: 2.25rem;
-  padding-bottom: 2.25rem;
+  margin-bottom: 4rem;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -909,6 +903,10 @@ img {
 }
 
 .blinked:hover::after {
+  animation: 1s steps(1) infinite blink;
+}
+
+.blink {
   animation: 1s steps(1) infinite blink;
 }
 

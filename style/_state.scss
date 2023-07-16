@@ -26,6 +26,9 @@
 		}
 	}	
 }
+.blink{
+	animation: 1s steps(1) infinite blink;	
+}
 .button{
 	position: relative;
 	&__text{
