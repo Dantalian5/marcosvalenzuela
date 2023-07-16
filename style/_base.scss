@@ -1,25 +1,17 @@
 * {
 	box-sizing: border-box;
 }
-a{
+a {
 	cursor: pointer;
 	color: inherit;
 }
-a:visited{
+a:visited {
 	appearance: none;
-}
-html{
-	overflow: hidden;
 }
 body {
 	min-height: 100vh;
 	min-height: 100svh;
-	 height: 100vh;
-	 height: 100svh;
 	background: $c-dark-blue;
-	 scroll-snap-type: y mandatory;
-	 scroll-behavior: smooth;
-	 overflow-y: scroll;
 }
 img,
 svg {

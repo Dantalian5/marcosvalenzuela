@@ -20,6 +20,14 @@
 	src: url(../assets/fonts/FiraCode-Bold.ttf);
 	font-display: swap;
 }
+@font-face {
+	font-family: "ocr";
+	font-style: normal;
+	font-weight: 500;
+	src: url(../assets/fonts/ocr-font-500.ttf);
+	font-display: swap;
+}
 
 // Fonts declare variable...
 $f_family-firacode: "Fira Code", monospace;
+$f_family-ocr: "ocr", monospace;

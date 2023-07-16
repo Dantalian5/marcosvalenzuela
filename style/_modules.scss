@@ -56,6 +56,7 @@
 		}
 		&__text {
 			margin-left: 0.5rem;
+			line-height: 1;
 		}
 	}
 }
@@ -178,7 +179,7 @@
 }
 .section-title {
 	padding-left: calc(2rem + 0.25rem);
-	padding-bottom: calc(2rem + 0.25rem);
+	margin-bottom: calc(4rem);
 	width: fit-content;
 }
 .styled-box {
@@ -223,7 +224,6 @@
 .project-card {
 	padding-block: 0rem 1rem;
 	padding-inline: 1rem;
-
 	min-width: 18.75rem;
 	width: 18.75rem;
 	scroll-snap-align: center;

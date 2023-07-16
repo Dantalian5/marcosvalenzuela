@@ -32,11 +32,6 @@
 	padding-inline: var(--section-inline-padding);
 	overflow: hidden;
 	z-index: 0;
-	&:not(.footer) {
-		min-height: 100vh;
-		min-height: 100svh;
-	}
-	scroll-snap-align: start;
 }
 
 .header {
@@ -48,7 +43,7 @@
 .projects,
 .contact,
 .footer {
-	padding-block: 8rem;
+	padding-block: 4rem 8rem;
 }
 .skills {
 	&__info {
