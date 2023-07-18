@@ -891,10 +891,6 @@ img {
   width: 100%;
 }
 
-.blinked:hover::after {
-  animation: 1s steps(1) infinite blink;
-}
-
 .blink {
   animation: 1s steps(1) infinite blink;
 }
@@ -925,15 +921,25 @@ img {
   width: 100%;
 }
 
-.social-link:hover {
-  color: #52C4C4;
-  transform: scale(1.2);
+@media (hover: hover) {
+  .project-card {
+    transition: transform 300ms;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    transition: transform 300ms;
+  }
+  .social-link:hover {
+    color: #52C4C4;
+    transform: scale(1.2);
+  }
+  .footer__extra:hover {
+    color: #52C4C4;
+  }
+  .blinked:hover::after {
+    animation: 1s steps(1) infinite blink;
+  }
 }
-
-.footer__extra:hover {
-  color: #52C4C4;
-}
-
 @keyframes blink {
   0% {
     color: #15162a;

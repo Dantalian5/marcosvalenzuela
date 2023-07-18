@@ -19,13 +19,6 @@
 		}
 	}
 }
-.blinked {
-	&:hover {
-		&::after {
-			animation: 1s steps(1) infinite blink;
-		}
-	}
-}
 .blink {
 	animation: 1s steps(1) infinite blink;
 }
@@ -56,13 +49,29 @@
 		border-color: $c-green-cyan;
 	}
 }
-.social-link:hover {
-	color: $c-green-cyan;
-	transform: scale(1.2);
-}
-.footer__extra {
-	&:hover {
+@media (hover:hover){
+	.project-card {
+		transition: transform 300ms;
+		&:hover {
+			transform: scale(1.05);
+			transition: transform 300ms;
+		}
+	}
+	.social-link:hover {
 		color: $c-green-cyan;
+		transform: scale(1.2);
+	}
+	.footer__extra {
+		&:hover {
+			color: $c-green-cyan;
+		}
+	}
+	.blinked {
+		&:hover {
+			&::after {
+				animation: 1s steps(1) infinite blink;
+			}
+		}
 	}
 }
 @keyframes blink {
