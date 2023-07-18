@@ -341,22 +341,6 @@
 			font-size: 1.125rem;
 		}
 	}
-	.top-navbar {
-		width: 100%;
-		align-items: stretch;
-		justify-content: space-between;
-		background: $c-dark-blue;
-		padding-block: 1rem;
-		padding-inline: var(--section-inline-padding);
-		&__logo {
-			&__arrow {
-				color: $c-green-cyan;
-			}
-			&__text {
-				margin-left: 0.5rem;
-			}
-		}
-	}
 	.hamburger {
 		&__checkbox {
 			display: none;

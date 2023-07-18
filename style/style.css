@@ -417,6 +417,8 @@ img {
 .header {
   gap: 2rem;
   padding-block: 2rem;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .about,
@@ -840,20 +842,6 @@ img {
   }
   .font-p--big {
     font-size: 1.125rem;
-  }
-  .top-navbar {
-    width: 100%;
-    align-items: stretch;
-    justify-content: space-between;
-    background: #15162A;
-    padding-block: 1rem;
-    padding-inline: var(--section-inline-padding);
-  }
-  .top-navbar__logo__arrow {
-    color: #52C4C4;
-  }
-  .top-navbar__logo__text {
-    margin-left: 0.5rem;
   }
   .hamburger__checkbox {
     display: none;
