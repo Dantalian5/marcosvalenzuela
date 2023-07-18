@@ -1,6 +1,5 @@
 :root {
 	--section-inline-value: 4%;
-	--section-inline-padding: clamp(1rem, var(--section-inline-value), 8rem);
 }
 .row {
 	display: flex;
@@ -29,7 +28,7 @@
 	z-index: 1;
 }
 .section {
-	padding-inline: var(--section-inline-padding);
+	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 	overflow: hidden;
 	z-index: 0;
 }

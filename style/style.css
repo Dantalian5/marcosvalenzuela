@@ -375,7 +375,6 @@ img {
 
 :root {
   --section-inline-value: 4%;
-  --section-inline-padding: clamp(1rem, var(--section-inline-value), 8rem);
 }
 
 .row {
@@ -410,7 +409,7 @@ img {
 }
 
 .section {
-  padding-inline: var(--section-inline-padding);
+  padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
   overflow: hidden;
   z-index: 0;
 }
@@ -550,7 +549,7 @@ img {
   justify-content: space-between;
   background: #15162A;
   padding-block: 1rem;
-  padding-inline: var(--section-inline-padding);
+  padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 }
 .top-navbar__logo__arrow {
   color: #52C4C4;

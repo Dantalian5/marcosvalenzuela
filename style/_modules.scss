@@ -49,7 +49,7 @@
 	justify-content: space-between;
 	background: $c-dark-blue;
 	padding-block: 1rem;
-	padding-inline: var(--section-inline-padding);
+	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 	&__logo {
 		&__arrow {
 			color: $c-green-cyan;
