@@ -49,7 +49,7 @@
 	justify-content: space-between;
 	background: $c-dark-blue;
 	padding-block: 1rem;
-	padding-inline: var(--section-inline-padding);
+	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 	&__logo {
 		&__arrow {
 			color: $c-green-cyan;
@@ -244,7 +244,7 @@
 		left: 0.5rem;
 		width: 4rem;
 		height: 4rem;
-		padding: $space-em;
+		padding: 1rem;
 		border-radius: 50%;
 		border: 4px solid $c-green-cyan;
 		background: $c-n-white;
@@ -274,6 +274,7 @@
 	position: relative;
 	width: fit-content;
 	margin-inline: auto;
+	margin-top: 1rem;
 	gap: 0.5rem;
 	&__item {
 		display: block;

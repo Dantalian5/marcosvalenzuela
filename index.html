@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<meta name="apple-mobile-web-app-capable" content="yes" >
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" >
 		<meta
 			name="description"
 			content="This is the portfolio webpage of Marcos Valenzuela"
-		/>
+		>
 		<!-- Title of the page -->
 		<title>Marcos Valenzuela | Portfolio</title>
 		<!-- Favicons setup -->
@@ -17,27 +17,27 @@
 			type="image/png"
 			sizes="32x32"
 			href="assets/favicon/favicon-32x32.png"
-		/>
+		>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
 			href="assets/favicon/favicon-16x16.png"
-		/>
+		>
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
 			href="assets/favicon/apple-touch-icon.png"
-		/>
-		<link rel="manifest" href="assets/favicon/site.webmanifest" />
+		>
+		<link rel="manifest" href="assets/favicon/site.webmanifest" >
 		<link
 			rel="mask-icon"
 			href="assets/favicon/safari-pinned-tab.svg"
 			color="#5bbad5"
-		/>
-		<meta name="msapplication-TileColor" content="#da532c" />
+		>
+		<meta name="msapplication-TileColor" content="#da532c" >
 		<!-- Stylesheet setup -->
-		<link rel="stylesheet" href="style/style.css" />
+		<link rel="stylesheet" href="style/style-min.css" >
 	</head>
 	<body>
 		<div class="navbar">
@@ -65,7 +65,7 @@
 						type="checkbox"
 						id="hamburger"
 						aria-label="Toggle Navigation"
-					/>
+					>
 					<label for="hamburger" class="hamburger__icon">
 						<svg
 							class="hamburger__box font-h2 font-h2--big"
@@ -161,9 +161,9 @@
 			</div>
 			<div class="hero__img">
 				<img
-					src="assets/img/Website Creator-amico.svg"
+					src="assets/img/Website-Creator-amico.svg"
 					alt="illustration of a person showing a program"
-				/>
+				>
 			</div>
 		</header>
 		<section id="about" class="section about row wrap">
@@ -197,7 +197,7 @@
 			<div class="skills__info row wrap">
 				<div class="styled-box skill-wrapper">
 					<div class="styled-box__title">
-						<h4 class="font-p font-p--big">Code:</h4>
+						<h3 class="font-p font-p--big">Code:</h3>
 					</div>
 					<div class="skill-wrapper__items row wrap">
 						<p class="skill-box row font-p font-p--big">
@@ -257,7 +257,7 @@
 				</div>
 				<div class="styled-box skill-wrapper">
 					<div class="styled-box__title">
-						<h4 class="font-p font-p--big">Code:</h4>
+						<h3 class="font-p font-p--big">Tools:</h3>
 					</div>
 					<div class="skill-wrapper__items row wrap">
 						<p class="skill-box row font-p font-p--big">
@@ -336,15 +336,18 @@
 						<h3 class="font-p font-p--big">Name: Art Gallery Website</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<img
-							srcset="
-								assets/img/art-gallery-screenshot@300w.jpg 1x,
-								assets/img/art-gallery-screenshot@600w.jpg 2x
-							"
-							src="assets/img/art-gallery-screenshot@300w.jpg"
-							alt="an image of a webpage"
-							loading="lazy"
-						/>
+						<picture>          
+							<source 
+							srcset="assets/img/art-gallery-screenshot@300w.webp, 
+									assets/img/art-gallery-screenshot@600w.webp 2x" 
+							type="image/webp"> 
+							<img 
+							srcset="assets/img/art-gallery-screenshot@300w.jpg, 
+									assets/img/art-gallery-screenshot@600w.jpg 2x" 
+							src="assets/img/art-gallery-screenshot@300w.jpg" 
+							alt="webpage screenshot"
+							loading="lazy">
+						</picture>
 						<a
 							class="project-card__github-btn"
 							title="Github Repository"
@@ -398,15 +401,18 @@
 						<h3 class="font-p font-p--big">Name: Typemaster landing page</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<img
-							srcset="
-								assets/img/typemaster-landing-screenshot@300w.jpg 1x,
-								assets/img/typemaster-landing-screenshot@600w.jpg 2x
-							"
-							src="assets/img/typemaster-landing-screenshot@300w.jpg"
-							alt="an image of a webpage"
-							loading="lazy"
-						/>
+						<picture>          
+							<source 
+							srcset="assets/img/typemaster-landing-screenshot@300w.webp, 
+									assets/img/typemaster-landing-screenshot@600w.webp 2x" 
+							type="image/webp"> 
+							<img 
+							srcset="assets/img/typemaster-landing-screenshot@300w.jpg, 
+									assets/img/typemaster-landing-screenshot@600w.jpg 2x" 
+							src="assets/img/typemaster-landing-screenshot@300w.jpg" 
+							alt="webpage screenshot"
+							loading="lazy">
+						</picture>
 						<a
 							class="project-card__github-btn"
 							title="Github Repository"
@@ -460,15 +466,18 @@
 						<h3 class="font-p font-p--big">Name: Suite landing page</h3>
 					</div>
 					<div class="project-card__image-wrapper">
-						<img
-							srcset="
-								assets/img/suit-landing-screenshot@300w.jpg 1x,
-								assets/img/suit-landing-screenshot@600w.jpg 2x
-							"
-							src="assets/img/suit-landing-screenshot@300w.jpg"
-							alt="an image of a webpage"
-							loading="lazy"
-						/>
+						<picture>          
+							<source 
+							srcset="assets/img/suit-landing-screenshot@300w.webp, 
+									assets/img/suit-landing-screenshot@600w.webp 2x" 
+							type="image/webp"> 
+							<img 
+							srcset="assets/img/suit-landing-screenshot@300w.jpg, 
+									assets/img/suit-landing-screenshot@600w.jpg 2x" 
+							src="assets/img/suit-landing-screenshot@300w.jpg" 
+							alt="webpage screenshot"
+							loading="lazy">
+						</picture>
 						<a
 							class="project-card__github-btn"
 							title="Github Repository"
@@ -561,7 +570,7 @@
 							id="name"
 							type="email"
 							placeholder="your name here"
-						/>
+						>
 					</div>
 					<div class="contact-box styled-box">
 						<label class="styled-box__title font-p font-p--big" for="mail"
@@ -574,7 +583,7 @@
 							type="text"
 							placeholder="youremail@example.com"
 							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-						/>
+						>
 					</div>
 				</div>
 				<div class="contact-box styled-box">
@@ -590,7 +599,7 @@
 					></textarea>
 				</div>
 				<div class="contact__btn-wrapper row">
-					<a class="button font-h2 font-h2--small" href="">
+					<a class="button font-h2 font-h2--small" href="#">
 						<p class="button__text">Send</p></a
 					>
 				</div>
@@ -598,7 +607,7 @@
 		</section>
 		<footer class="section footer row wrap">
 			<div class="footer__logo row column">
-				<img class="logo" src="assets/base/mylogo.svg" alt="logo" />
+				<img class="logo" src="assets/base/mylogo.svg" alt="logo" >
 				<p class="font-h2 font-h2--small">Marcos_Valenzuela</p>
 			</div>
 

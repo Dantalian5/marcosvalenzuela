@@ -1,6 +1,5 @@
 :root {
 	--section-inline-value: 4%;
-	--section-inline-padding: clamp(1rem, var(--section-inline-value), 8rem);
 }
 .row {
 	display: flex;
@@ -29,7 +28,7 @@
 	z-index: 1;
 }
 .section {
-	padding-inline: var(--section-inline-padding);
+	padding-inline: clamp(1rem, var(--section-inline-value), 8rem);
 	overflow: hidden;
 	z-index: 0;
 }
@@ -82,8 +81,6 @@
 		margin-inline: auto;
 		gap: 2rem;
 	}
-	&__extra {
-	}
 }
 .section__projects {
 	position: relative;
@@ -94,7 +91,7 @@
 	align-items: stretch;
 	gap: 4rem;
 	align-self: stretch;
-	overflow-y: scroll;
+	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 }
