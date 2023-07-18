@@ -82,8 +82,6 @@
 		margin-inline: auto;
 		gap: 2rem;
 	}
-	&__extra {
-	}
 }
 .section__projects {
 	position: relative;
@@ -94,7 +92,7 @@
 	align-items: stretch;
 	gap: 4rem;
 	align-self: stretch;
-	overflow-y: scroll;
+	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 }
