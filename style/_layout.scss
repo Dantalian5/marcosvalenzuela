@@ -36,6 +36,8 @@
 .header {
 	gap: 2rem;
 	padding-block: 2rem;
+	min-height: 100vh;
+	min-height: 100svh;
 }
 .about,
 .skills,
@@ -43,6 +45,11 @@
 .contact,
 .footer {
 	padding-block: 4rem 8rem;
+}
+.about{
+	&__wrapper{
+		gap: 4rem;
+	}
 }
 .skills {
 	&__info {
