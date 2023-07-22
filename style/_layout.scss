@@ -46,6 +46,11 @@
 .footer {
 	padding-block: 4rem 8rem;
 }
+.about{
+	&__wrapper{
+		gap: 4rem;
+	}
+}
 .skills {
 	&__info {
 		gap: 2rem;

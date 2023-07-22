@@ -429,6 +429,10 @@ img {
   padding-block: 4rem 8rem;
 }
 
+.about__wrapper {
+  gap: 4rem;
+}
+
 .skills__info {
   gap: 2rem;
   align-items: stretch;
@@ -644,8 +648,8 @@ img {
   gap: 2rem;
 }
 .hero__img {
-  min-width: 20rem;
-  max-width: 35rem;
+  flex-basis: 20rem;
+  max-width: 30rem;
   margin-inline: auto;
 }
 
@@ -667,9 +671,48 @@ img {
 
 .info-block {
   padding-inline: 2.25rem 2rem;
+  flex-basis: 18.75rem;
+  position: relative;
 }
-.info-block > :not(:last-child) {
-  margin-bottom: 2rem;
+.info-block__alt {
+  display: none;
+}
+
+.read-more__btn, .read-more__label {
+  position: absolute;
+  bottom: -2rem;
+  transform: translate(0%, 50%);
+}
+.read-more__btn {
+  visibility: hidden;
+}
+.read-more__label {
+  color: #52C4C4;
+  cursor: pointer;
+}
+.read-more__label::after {
+  content: "Read more";
+}
+
+#read-more__btn:checked ~ .info-block__text > .info-block__alt {
+  display: inline;
+}
+#read-more__btn:checked ~ .read-more__label::after {
+  content: "Read less";
+}
+
+.img-block {
+  flex-basis: 18.75rem;
+  max-width: 400px;
+  padding-inline: 2.25rem;
+  margin-inline: auto;
+}
+.img-block__container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid #52C4C4;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .section-title {
@@ -725,7 +768,7 @@ img {
 .project-card {
   padding-block: 0rem 1rem;
   padding-inline: 1rem;
-  min-width: 18.75rem;
+  flex-shrink: 0;
   width: 18.75rem;
   scroll-snap-align: center;
 }

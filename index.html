@@ -170,25 +170,49 @@
 			<h2 class="section-title font-h2 font-h2--big">
 				<span class="guides"></span>About Me
 			</h2>
-			<div class="info-block">
-				<p class="info-block__text font-p font-p--big">
-					<span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
-					developer based in Italy. My passion for design and programming has
-					led me to dive into the exciting world of web development...
-					<!-- With
-					experience in HTML and CSS, I enjoy creating visually appealing and
-					functional web designs. Although my journey is still relatively short,
-					I am eager to continue learning and improving my skills in the field
-					of web development. My goal is to create intuitive and visually
-					engaging websites that provide a great user experience. I love taking
-					on new challenges and finding creative solutions to overcome them. If
-					you're looking for an enthusiastic web developer ready to grow
-					alongside your project, feel free to contact me! I'm excited to be
-					part of new projects and contribute my HTML and CSS skills. I look
-					forward to the opportunity to work with you and bring your digital
-					vision to life! -->
-				</p>
-			</div>
+			<div class="about__wrapper row wrap">
+				<div class="info-block">
+					<input
+						class="read-more__btn"
+						type="checkbox"
+						id="read-more__btn"
+						aria-label="Toggle read more"
+					>
+					<label for="read-more__btn" class="read-more__label font-p font-p--big ">
+					</label>
+					<p class="info-block__text font-p font-p--big">
+						<span class="guides"></span>Hi there! I'm Marcos Valenzuela, a web
+						developer based in Italy. My passion for design and programming has
+						led me to dive into the exciting world of web development. <br><span class="info-block__alt">With experience in HTML and CSS, I enjoy creating visually appealing and
+							functional web designs. Although my journey is still relatively short,
+							I am eager to continue learning and improving my skills in the field
+							of web development. My goal is to create intuitive and visually
+							engaging websites that provide a great user experience. I love taking
+							on new challenges and finding creative solutions to overcome them. If
+							you're looking for an enthusiastic web developer ready to grow
+							alongside your project, feel free to contact me! I'm excited to be
+							part of new projects and contribute my HTML and CSS skills. I look
+							forward to the opportunity to work with you and bring your digital
+							vision to life!</span>
+					</p>
+				</div>
+				<div class="img-block">
+					<div class="img-block__container">
+						<picture>          
+							<source 
+							srcset="assets/img/my@600w.webp, 
+									assets/img/my@1200w.webp 2x" 
+							type="image/webp"> 
+							<img 
+							srcset="assets/img/my@600w.jpg, 
+									assets/img/my@1200w.jpg 2x" 
+							src="assets/img/my@600w.jpg" 
+							alt="webpage screenshot"
+							loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>			
 		</section>
 		<section id="skills" class="section skills">
 			<h2 class="section-title font-h2 font-h2--big">
