@@ -26,8 +26,7 @@ Create a functional portfolio, using only what I have learned so far (HTML and C
 
 ### Screenshot
 
-![](./screenshot-desktop.jpg)
-![](./screenshot-mobile.jpg)
+![](./screenshot-desktop.jpg) ![](./screenshot-mobile.jpg)
 
 ### Links
 
